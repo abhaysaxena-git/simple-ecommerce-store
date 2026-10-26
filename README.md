@@ -1,3 +1,9 @@
+## 🚀 Live Demo
+
+[Visit ShopEase E-commerce Store](https://simple-ecommerce-store-po3s.onrender.com)
+
+
+
 # Simple E-commerce Store
 
 A starter e-commerce project with:
