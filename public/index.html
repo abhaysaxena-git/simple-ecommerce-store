@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple demo online store." />
+  <title>ShopEase — Everyday Finds</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="ShopEase home"><span class="brand-mark">S</span> ShopEase</a>
+    <div class="header-actions">
+      <button class="nav-button" id="orders-btn">My orders</button>
+      <button class="nav-button" id="auth-btn">Log in</button>
+      <button class="cart-button" id="cart-btn">Cart <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE EVERYDAY EDIT</p>
+        <h1>Good finds.<br><span>Better days.</span></h1>
+        <p class="hero-subtitle">Thoughtful essentials for your everyday life.</p>
+        <a class="primary-button hero-cta" href="#products">Explore the collection <span>→</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orb"></div>
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000" alt="Bright, modern retail store" />
+        <div class="floating-note"><span>✦</span><div><strong>Little things,</strong><br />picked with care.</div></div>
+      </div>
+    </section>
+
+    <section class="shop-section" id="products">
+      <div class="section-heading">
+        <div><p class="eyebrow">SHOP THE COLLECTION</p><h2>Find your next favourite</h2></div>
+        <div class="filters">
+          <input id="search-input" type="search" placeholder="Search products..." aria-label="Search products" />
+          <select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select>
+        </div>
+      </div>
+      <div id="product-grid" class="product-grid"><p class="muted">Loading products…</p></div>
+    </section>
+    <section id="orders-view" class="shop-section hidden"></section>
+  </main>
+
+  <div class="overlay hidden" id="overlay"></div>
+  <aside class="drawer hidden" id="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-heading"><div><p class="eyebrow">YOUR BAG</p><h2>Shopping cart</h2></div><button class="icon-button" id="close-cart" aria-label="Close cart">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer"><div class="total-line"><span>Subtotal</span><strong id="cart-total">₹0</strong></div><p class="muted small">Shipping and taxes are calculated at checkout.</p><button id="checkout-btn" class="primary-button full-width">Place order <span>→</span></button></div>
+  </aside>
+
+  <div class="modal-backdrop hidden" id="modal-backdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="icon-button modal-close" id="close-modal" aria-label="Close">×</button>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">S</span> ShopEase</a><p>Made for the little things that make a day.</p><span>Demo store · No real payments are taken</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
